@@ -27,7 +27,7 @@ docker run -d --name rag-qdrant -p 6333:6333 -v qdrant_storage:/qdrant/storage q
 uv sync
 
 # 3. 색인 (문서를 쪼개 → 숫자로 바꿔 → DB 에 넣는다)
-DOCS_DIR=tests/fixtures uv run index.py
+DOCS_DIR=tests/sample-docs uv run index.py
 
 # 4. 검색
 uv run search.py "워커 늘리는 법"

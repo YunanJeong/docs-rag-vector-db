@@ -9,7 +9,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from rag.chunk import chunk_markdown  # noqa: E402
 
-FIXTURES = Path(__file__).resolve().parent / "fixtures"
+SAMPLES = Path(__file__).resolve().parent / "sample-docs"
 
 
 def test_breadcrumb_prefix():
@@ -67,10 +67,10 @@ def test_blank_chunks_dropped():
     assert chunks[0].heading_path == ["내용있음"]
 
 
-def test_fixtures_parse():
-    files = sorted(FIXTURES.rglob("*.md"))
-    assert files, "픽스처가 없다"
+def test_sample_docs_parse():
+    files = sorted(SAMPLES.rglob("*.md"))
+    assert files, "샘플 문서가 없다"
     for f in files:
-        chunks = chunk_markdown(f.read_text(encoding="utf-8"), str(f.relative_to(FIXTURES)))
+        chunks = chunk_markdown(f.read_text(encoding="utf-8"), str(f.relative_to(SAMPLES)))
         assert chunks, f"{f} 에서 조각이 안 나왔다"
         assert all(c.text.strip() for c in chunks)

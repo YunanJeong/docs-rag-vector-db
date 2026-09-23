@@ -86,7 +86,7 @@ docs-rag-vector-db/
 ├── search.py           진입점 2 — 질의하고 결과 출력
 ├── tests/
 │   ├── test_chunk.py   모델·DB 없이 도는 단위 테스트
-│   └── fixtures/*.md
+│   └── sample-docs/*.md
 ├── pyproject.toml      의존성 정의 (uv)
 ├── uv.lock             잠금 파일. 커밋한다
 ├── .env.example        자리표시자만. 실제 값 금지
@@ -258,7 +258,7 @@ python search.py "kr-mum" --top-k 3
 
 ## 12. 실행 환경 (확인 완료 — 물을 것 없음)
 
-- **`DOCS_DIR` = `tests/fixtures`.** 색인 대상 md 를 직접 만들어야 한다. 아래 조건을 만족하는
+- **`DOCS_DIR` = `tests/sample-docs`.** 색인 대상 md 를 직접 만들어야 한다. 아래 조건을 만족하는
   샘플 4개 내외를 작성한다. 이게 곧 10절 완료 기준의 검증 데이터다.
   - 문서 하나에는 `워커`·`늘리다` 라는 말을 **쓰지 않고** `노드그룹 desired 조정` 같은
     표현만 담는다 → dense 검증용
