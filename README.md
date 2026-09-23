@@ -1,4 +1,4 @@
-# docs-rag-vector-db
+# rag-vector-db-poc
 
 마크다운 문서를 벡터 DB 에 넣고 자연어로 관련 내용을 찾는, 최소 구성의 **RAG 파이프라인**.
 
