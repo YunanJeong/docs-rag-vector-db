@@ -1,5 +1,5 @@
 [project]
-name = "docs-rag-vector-db"
+name = "rag-poc"
 version = "0.1.0"
 description = "로컬 마크다운을 벡터 DB 에 색인하고 자연어로 관련 조각을 찾는 최소 RAG 파이프라인"
 requires-python = ">=3.11"
